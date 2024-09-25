@@ -1,0 +1,26 @@
+<ul ngbNav class="nav-tabs justify-content-center" #nav=ngbNav>
+
+  <li ngbNavItem>
+    <button ngbNavLink>notes</button>
+    <ng-template ngbNavContent><app-notes></app-notes></ng-template>
+  </li>
+
+  <li ngbNavItem>
+    <button ngbNavLink>diary</button>
+    <ng-template ngbNavContent>test</ng-template>
+  </li>
+
+  <li ngbNavItem>
+    <button ngbNavLink>history</button>
+    <ng-template ngbNavContent><app-history></app-history></ng-template>
+  </li>
+
+  <li ngbNavItem>
+    <button ngbNavLink>settings</button>
+    <ng-template ngbNavContent><app-settings></app-settings></ng-template>
+  </li>
+
+</ul>
+
+
+<div [ngbNavOutlet]="nav"></div>
