@@ -1,7 +1,24 @@
 <div class="container justify-content-center">
-  <div *ngFor="let item of notes" >
-    <div class="col-sm-6 col-md-4 col-lg-3 m-auto">
-      <p>{{item}}</p>
+  <div class="row">
+    <div *ngFor="let item of notes" class="col-lg-4">
+      <div class="card text-bg-light mb-3" style="min-width: 20rem; margin: 10px">
+        <div class="card-header">{{item[0]}}</div>
+        <div class="card-body">
+          <h5 class="card-title">{{item[1]}}</h5>
+          <p class="card-text">Priorität {{item[2]}}</p>
+        </div>
+        <div class="container justify-content-center">
+          <div class="row-cols-auto m-3 btn-group-sm">
+            <button class="btn btn-light btnNote" (click)="modifyNote()">modify</button>
+            <button class="btn btn-light btnNote" (click)="deleteNote(this.item[3])">delete</button>
+          </div>
+        </div>
+
+
+      </div>
     </div>
+
   </div>
+
 </div>
+

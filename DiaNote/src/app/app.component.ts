@@ -13,13 +13,14 @@ import {NotesComponent} from "./notes/notes.component";
 import {DiaryComponent} from "./diary/diary.component";
 import {HistoryComponent} from "./history/history.component";
 import {SettingsComponent} from "./settings/settings.component";
+import {AddNoteComponent} from "./add-note/add-note.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgbNav, NgbNavLinkButton, NgbNavItem, NotesComponent, NgbNavOutlet, DiaryComponent, HistoryComponent, SettingsComponent, NgbNavContent],
+  imports: [RouterOutlet, NgbNav, NgbNavLinkButton, NgbNavItem, NotesComponent, NgbNavOutlet, DiaryComponent, HistoryComponent, SettingsComponent, NgbNavContent, AddNoteComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css', "../styles.css"]
 })
 export class AppComponent {
   title = 'DiaNote';
